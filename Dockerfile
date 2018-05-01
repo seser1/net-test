@@ -6,5 +6,5 @@ RUN set -x && \
   git clone git://github.com/seser1/net-test.git \
   cd net-test \
   bundle install \
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 1000
+ENTRYPOINT ruby /usr/local/net-test/main.rb

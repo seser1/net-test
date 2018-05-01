@@ -1,9 +1,10 @@
 require 'socket'
 
-loop do
-  s=gets
+def client(s)
+
   TCPSocket.open('localhost', 1000) do |sock|
-      sock.write(s)
+      sock.write(s.to_s)
   end
+
 end
 
